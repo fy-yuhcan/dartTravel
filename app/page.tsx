@@ -1,11 +1,29 @@
-import Image from 'next/image';
+"use client";
+
+import { useState } from 'react';
+import TravelPlannerCard from '@/components/home/card';
 
 export default function Home() {
+  const [destinations, setDestinations] = useState<string[]>([]);
+  const [selectedRegion, setSelectedRegion] = useState<string>("");
+
+  const addDestination = (destination: string) => {
+    setDestinations([...destinations, destination]);
+  };
+
+  const handleSelectRegion = (region: string) => {
+    setSelectedRegion(region);
+  };
+
   return (
-    <>
-      <h1 className="text-4xl font-bold">Hello, world!</h1>
-      <Image src="/vercel.svg" alt="Vercel Logo" width={283} height={64} />
-    </>
+    <div className="min-h-screen flex items-center justify-center p-8 bg-gray-100">
+      <TravelPlannerCard
+        destinations={destinations}
+        selectedRegion={selectedRegion}
+        onSelectRegion={handleSelectRegion}
+        onAddDestination={addDestination}
+      />
+    </div>
   );
 }
 
