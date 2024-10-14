@@ -9,7 +9,7 @@
     "lint": "next lint",
     "tsc": "tsc --noEmit",
     "test": "react-scripts test --passWithNoTests",
-    "format": "prettier --write ./src/**/*.{ts,tsx}"
+    "format": "prettier --write ./**/*.{ts,tsx}"
   },
   "dependencies": {
     "next": "14.2.14",
