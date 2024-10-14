@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ["plugin:@typescript-eslint/recommended", "next/core-web-vitals","plugin:tailwindcss/recommended","prettier",],
-    plugins: ["unused-imports"],
+    plugins: ["import","unused-imports"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         project: "./tsconfig.json",
