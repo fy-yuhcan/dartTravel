@@ -6,7 +6,7 @@ module.exports = {
     "plugin:tailwindcss/recommended",
     "prettier"
   ],
-  plugins: ["import", "unused-imports"],
+  plugins: ["import", "unused-imports","@typescript-eslint"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     project: "./tsconfig.json"
@@ -17,7 +17,16 @@ module.exports = {
     "@typescript-eslint/no-unsafe-call": "error",
     "@typescript-eslint/no-unsafe-member-access": "error",
     "@typescript-eslint/no-unsafe-return": "error",
-    "unused-imports/no-unused-imports-ts": "warn",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+  "warn",
+  {
+    "vars": "all",
+    "varsIgnorePattern": "^_",
+    "args": "after-used",
+    "argsIgnorePattern": "^_"
+  }
+],
     "import/order": [
       "error",
       {
@@ -44,6 +53,6 @@ module.exports = {
         }
       }
     ]
-  }
+  },
 };
 
