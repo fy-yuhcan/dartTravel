@@ -16,12 +16,19 @@ const RegionSelector: React.FC<RegionSelectorProps> = ({ selectedRegion, onSelec
           <SelectValue placeholder="地域を選択してください" />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="asia">アジア</SelectItem>
-          <SelectItem value="europe">ヨーロッパ</SelectItem>
-          <SelectItem value="northamerica">北米</SelectItem>
-          <SelectItem value="southamerica">南米</SelectItem>
-          <SelectItem value="africa">アフリカ</SelectItem>
-          <SelectItem value="oceania">オセアニア</SelectItem>
+          <SelectItem value="hokkaido">北海道</SelectItem>
+          <SelectItem value="tohoku">東北</SelectItem>
+          <SelectItem value="northkanto">北関東</SelectItem>
+          <SelectItem value="neartoukyou">東京近辺</SelectItem>
+          <SelectItem value="myhome">藤田家</SelectItem>
+          <SelectItem value="hokuriku">北陸</SelectItem>
+          <SelectItem value="kousinetu">甲信越</SelectItem>
+          <SelectItem value="chubu">中部</SelectItem>
+          <SelectItem value="kansai">関西</SelectItem>
+          <SelectItem value="chugoku">中国</SelectItem>
+          <SelectItem value="sikoku">四国</SelectItem>
+          <SelectItem value="kyushu">九州</SelectItem>
+          <SelectItem value="okinawa">沖縄</SelectItem>
         </SelectContent>
       </Select>
     </div>

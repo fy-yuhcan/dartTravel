@@ -30,7 +30,7 @@ const DestinationInput: React.FC<DestinationInputProps> = ({ onAddDestination })
       <div className="flex space-x-2">
         <Input
           id="new-destination"
-          placeholder="例：京都"
+          placeholder="例：清水寺"
           value={newDestination}
           onChange={handleChange}
         />
