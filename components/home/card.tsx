@@ -1,4 +1,3 @@
-// components/TravelPlanner/TravelPlannerCard.tsx
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import TravelPlannerFooter from "./footer";
 import TravelPlannerHeader from "./home-heder";
