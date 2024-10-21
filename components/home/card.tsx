@@ -1,9 +1,10 @@
+import React from 'react';
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import TravelPlannerFooter from "./footer";
-import TravelPlannerHeader from "./home-heder";
-import DestinationInput from "./input";
-import DestinationList from "./list";
-import RegionSelector from "./selector";
+import TravelPlannerFooter from './footer';
+import TravelPlannerHeader from './home-heder';
+import DestinationInput from './input';
+import DestinationList from './list';
+import RegionSelector from './selector';
 
 
 interface TravelPlannerCardProps {
@@ -11,13 +12,15 @@ interface TravelPlannerCardProps {
   selectedRegion: string;
   onSelectRegion: (region: string) => void;
   onAddDestination: (destination: string) => void;
+  onStartTravel: () => void;
 }
 
 const TravelPlannerCard: React.FC<TravelPlannerCardProps> = ({
   destinations,
   selectedRegion,
   onSelectRegion,
-  onAddDestination
+  onAddDestination,
+  onStartTravel, 
 }) => {
   return (
     <Card className="w-full max-w-md mx-auto">
@@ -28,10 +31,11 @@ const TravelPlannerCard: React.FC<TravelPlannerCardProps> = ({
         {destinations.length > 0 && <DestinationList destinations={destinations} />}
       </CardContent>
       <CardFooter>
-        <TravelPlannerFooter />
+        <TravelPlannerFooter onStartTravel={onStartTravel} />
       </CardFooter>
     </Card>
   );
 };
 
 export default TravelPlannerCard;
+
