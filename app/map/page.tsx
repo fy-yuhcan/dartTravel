@@ -17,7 +17,7 @@ const center = {
 export default function MapComponent() {
   const { isLoaded, loadError } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY || "", // 環境変数を使用
+    googleMapsApiKey: process.env.GOOGLE_MAP_API_KEY || "", // 環境変数を使用
   });
 
   const [map, setMap] = useState<google.maps.Map | null>(null);

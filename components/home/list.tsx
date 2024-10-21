@@ -1,4 +1,3 @@
-// components/TravelPlanner/DestinationList.tsx
 import { Label } from "@/components/ui/label";
 
 interface DestinationListProps {
